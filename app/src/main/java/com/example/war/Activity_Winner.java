@@ -37,14 +37,16 @@ public class Activity_Winner extends AppCompatActivity {
         int winner = getIntent().getIntExtra(WINNER, -1);
         int score = getIntent().getIntExtra(SCORE, -1);
         winner_LBL_score.setText("Score:" + score);
-        if (winner == 2) {
+
+        if(winner == 1){
+            winner_IMG_winner.setImageResource(getResources().getIdentifier("drawable/queen", "drawable", getPackageName()));
+        } else if (winner == 2) {
             winner_LBL_player.setText("Player 2");
             winner_IMG_winner.setImageResource(getResources().getIdentifier("drawable/king1", "drawable", getPackageName()));
-        } else if (winner < 1){
+        }else{
             winner_LBL_player.setText("");
             winner_LBL_winner.setText("Draw!");
-            winner_IMG_winner.setImageResource(getResources().getIdentifier("drawable/spears", "drawable", getPackageName()));
-            winner_IMG_trophy.setImageResource(getResources().getIdentifier("drawable/emblem", "drawable", getPackageName()));
+            winner_IMG_trophy.setImageResource(getResources().getIdentifier("drawable/conflict", "drawable", getPackageName()));
         }
     }
 

@@ -14,12 +14,12 @@
 
     <ImageView
         android:id="@+id/winner_IMG_trophy"
-        android:layout_width="180dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:src="@drawable/trophy"
-        android:layout_weight="2"
+        android:layout_weight="4"
         android:scaleType="fitCenter"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:layout_gravity="center"
         >
     </ImageView>
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Winner!"
-        android:textSize="30dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:layout_weight="1"
         android:textAllCaps="true"
@@ -43,8 +43,8 @@
         android:id="@+id/winner_LBL_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="player 1"
-        android:textSize="40dp"
+        android:text="Player 1"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textAllCaps="true"
         android:layout_weight="1"
@@ -54,11 +54,10 @@
     </TextView>
     <ImageView
         android:id="@+id/winner_IMG_winner"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:scaleType="fitStart"
-        android:src="@drawable/queen"
-        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:layout_weight="4"
         >
     </ImageView>
 
@@ -67,11 +66,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="score"
-        android:textSize="30dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/winner_txt"
-        android:gravity="top"
         android:layout_weight="1"
+        android:gravity="top"
         >
     </TextView>
 </LinearLayout>
