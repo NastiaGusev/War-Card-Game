@@ -1,4 +1,6 @@
-package com.example.war;
+package com.example.war.warCardGame;
+
+import com.example.war.warCardGame.Card;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,8 +16,10 @@ public class WarGame {
     private Card card2;
     private int score1 = 0;
     private int score2 = 0;
+    private int roundWinner;
     private int winnerScore = 0;
     private int check = 0;
+    private boolean gameOver = false;
 
     public WarGame() {
         initDeck();
@@ -28,7 +32,7 @@ public class WarGame {
         int value = 2;
         String path;
         for (int i = 1; i < DECK_SIZE + 1; i++) {
-            path = "drawable/" + "card_" + i;
+            path = "drawable/img_card_" + i;
             deck.add(new Card(path, value));
             if ((i % 4) == 0) {
                 value++;
@@ -58,22 +62,26 @@ public class WarGame {
     }
 
     //Check if all cards have been played
-    public int check(){
+    private void checkGameOver(){
         check++;
-        if (check != (DECK_SIZE/2))
-            return 1;
-        else
-            return -1;
+        if (check == (DECK_SIZE/2) ){
+            gameOver = true;
+        }
     }
 
     //One move- display 2 cards and check who is the winner for the round
     public int oneMove() {
+        checkGameOver();
+        if (gameOver) {
+            return -1;
+        }
         card1 = getNextCard();
         card2 = getNextCard();
         if (card1 == null || card2 == null) {
             return -1;
         }
-        return setScore(card1, card2);
+        roundWinner = setScore(card1, card2);
+        return 1;
     }
 
     public int getScore(int player) {
@@ -110,5 +118,9 @@ public class WarGame {
 
     public int getWinnerScore() {
         return winnerScore;
+    }
+
+    public int getRoundWinner(){
+        return roundWinner;
     }
 }

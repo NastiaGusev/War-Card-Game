@@ -11,16 +11,16 @@
         android:theme="@style/Theme.War"
         >
         <activity
-            android:name=".Activity_Winner"
+            android:name=".activities.Activity_Winner"
             android:configChanges="orientation|screenLayout|screenSize|layoutDirection"
             android:screenOrientation="sensorLandscape" >
         </activity>
         <activity
-            android:name=".Activity_Game"
+            android:name=".activities.Activity_Game"
             android:configChanges="orientation|screenLayout|screenSize|layoutDirection"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:configChanges="orientation|screenLayout|screenSize|layoutDirection"
             android:screenOrientation="sensorLandscape" >
             <intent-filter>

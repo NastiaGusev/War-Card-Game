@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Game"
+    tools:context=".activities.Activity_Game"
     android:background="@color/game_background">
 
     <LinearLayout
@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:src="@drawable/queen"
+                android:src="@drawable/img_queen"
 
                 ></ImageView>
 
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="17"
 
-            android:src="@drawable/back"></ImageView>
+            android:src="@drawable/img_cardback"></ImageView>
 
         <ImageView
             android:id="@+id/game_IMG_deck2"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="17"
 
-            android:src="@drawable/back"></ImageView>
+            android:src="@drawable/img_cardback"></ImageView>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:src="@drawable/king1"></ImageView>
+                android:src="@drawable/img_king1"></ImageView>
 
 
             <TextView
@@ -105,7 +105,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:src="@drawable/play"
+        android:src="@drawable/img_play"
         android:paddingBottom="10dp"
         android:scaleType="fitCenter"
         android:focusableInTouchMode="false"

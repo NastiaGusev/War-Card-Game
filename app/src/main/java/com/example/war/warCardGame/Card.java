@@ -1,4 +1,4 @@
-package com.example.war;
+package com.example.war.warCardGame;
 
 public class Card {
     private String imgName = "";
