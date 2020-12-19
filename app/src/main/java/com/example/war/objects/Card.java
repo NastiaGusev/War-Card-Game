@@ -1,6 +1,6 @@
-package com.example.war.warCardGame;
+package com.example.war.objects;
 
-public class Card {
+public class Card  {
     private String imgName = "";
     private int value = 0;
 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/game_background"
+    >
+
+    <ImageView
+        android:id="@+id/listView_TXT_icon"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_player1"
+        android:layout_weight="5"
+        >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/listView_TXT_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_weight="10"
+        android:textStyle="bold"
+        android:gravity="center">
+    </TextView>
+
+    <TextView
+        android:id="@+id/listView_TXT_score"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:layout_weight="10"
+        android:gravity="center">
+    </TextView>
+
+    <TextView
+        android:id="@+id/listView_TXT_date"
+        android:text="Date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:lines="2"
+        android:maxLines="2"
+        android:gravity="center"
+        >
+    </TextView>
+
+</LinearLayout>

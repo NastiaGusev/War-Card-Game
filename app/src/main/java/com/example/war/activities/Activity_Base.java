@@ -1,13 +1,20 @@
 package com.example.war.activities;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.war.utils.MyScreenUtils;
 
 public class Activity_Base extends AppCompatActivity {
+
+    private  MediaPlayer mp;
+    protected boolean isDoublePressToClose = false;
+    private static final int TIME_INTERVAL = 2000;
+    private long mBackPressed;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,10 +30,6 @@ public class Activity_Base extends AppCompatActivity {
         }
     }
 
-    protected boolean isDoublePressToClose = false;
-    private static final int TIME_INTERVAL = 2000;
-    private long mBackPressed;
-
     @Override
     public void onBackPressed() {
         if (isDoublePressToClose) {
@@ -40,4 +43,27 @@ public class Activity_Base extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+    public void playSound(AppCompatActivity activity,int rawSound){
+        mp = MediaPlayer.create(activity,rawSound);
+
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.reset();
+                mp.release();
+                mp = null;
+            }
+        });
+        mp.start();
+    }
+
+    public void stopPlaying() {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
+        }
+    }
+
 }

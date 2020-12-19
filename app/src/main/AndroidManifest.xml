@@ -2,27 +2,44 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.war">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <application
-        android:allowBackup="true"
+        android:name=".App"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.War"
-        >
+        android:theme="@style/Theme.War">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB5F8xApjbk_qe0Taex-9lq3BFw3PJsOX0"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".activities.Activity_TopTen"
+            android:configChanges="orientation|screenLayout|screenSize|layoutDirection"
+            android:screenOrientation="sensorLandscape"></activity>
+
         <activity
             android:name=".activities.Activity_Winner"
             android:configChanges="orientation|screenLayout|screenSize|layoutDirection"
-            android:screenOrientation="sensorLandscape" >
-        </activity>
+            android:screenOrientation="sensorLandscape"></activity>
         <activity
             android:name=".activities.Activity_Game"
             android:configChanges="orientation|screenLayout|screenSize|layoutDirection"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.Activity_Main"
             android:configChanges="orientation|screenLayout|screenSize|layoutDirection"
-            android:screenOrientation="sensorLandscape" >
+            android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

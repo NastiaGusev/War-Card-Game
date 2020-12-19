@@ -17,4 +17,5 @@
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
 
     </style>
+
 </resources>

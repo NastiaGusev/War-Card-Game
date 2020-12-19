@@ -7,7 +7,21 @@
     tools:context=".activities.Activity_Game"
     android:background="@color/game_background">
 
+    <ProgressBar
+        android:id="@+id/game_progressbar"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="15dp"
+        android:minWidth="250dp"
+        android:max="26"
+        android:paddingTop="13dp"
+        android:progressDrawable="@drawable/progressbar"
+        android:progress="0" />
+
     <LinearLayout
+        android:layout_below="@+id/game_progressbar"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,13 +37,24 @@
             android:layout_gravity="center"
             android:gravity="bottom">
 
+            <TextView
+                android:id="@+id/game_TXT_player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Player1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/denk_one"
+                android:textSize="20sp"></TextView>
 
             <ImageView
                 android:id="@+id/game_IMG_player1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
-                android:src="@drawable/img_queen"
+                android:layout_weight="4"
+                android:src="@drawable/img_player1"
 
                 ></ImageView>
 
@@ -44,7 +69,8 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textAlignment="center"></TextView>
+                android:textAlignment="center"
+                android:fontFamily="@font/denk_one"></TextView>
 
         </LinearLayout>
 
@@ -54,7 +80,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="17"
-
             android:src="@drawable/img_cardback"></ImageView>
 
         <ImageView
@@ -74,12 +99,26 @@
             android:gravity="bottom"
             >
 
+            <TextView
+                android:id="@+id/game_TXT_player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/denk_one"
+                android:textSize="20sp"
+                ></TextView>
+
+
             <ImageView
                 android:id="@+id/game_IMG_player2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
-                android:src="@drawable/img_king1"></ImageView>
+                android:layout_weight="4"
+                android:src="@drawable/img_player2"></ImageView>
 
 
             <TextView
@@ -93,20 +132,21 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"
+                android:fontFamily="@font/denk_one"></TextView>
         </LinearLayout>
 
     </LinearLayout>
 
     <ImageButton
         android:id="@+id/game_IBTN_play"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:src="@drawable/img_play"
-        android:paddingBottom="10dp"
+        android:src="@drawable/img_timer"
+        android:paddingBottom="8dp"
         android:scaleType="fitCenter"
         android:focusableInTouchMode="false"
         ></ImageButton>

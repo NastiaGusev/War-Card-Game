@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity"
+    tools:context=".activities.Activity_Main"
     android:orientation="vertical"
     android:background="@color/game_background"
     android:gravity="center"
@@ -17,23 +17,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/bowlby_one_sc"
         android:gravity="bottom"
         android:text="card War"
         android:textAllCaps="true"
         android:textSize="45sp"
-
         android:textStyle="bold"></TextView>
 
     <Button
-    android:id="@+id/main_BTN_start"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    android:text="Start"
-    android:layout_gravity="center"
-    android:backgroundTint="@color/buttonMain"
-    >
+        android:id="@+id/main_BTN_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/buttonMain"
+        android:fontFamily="@font/denk_one"
+        android:text="start"></Button>
+
+    <Button
+        android:id="@+id/main_BTN_topTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="top 10"
+        android:layout_gravity="center"
+        android:fontFamily="@font/denk_one"
+        android:backgroundTint="@color/buttonMain"
+        >
     </Button>
 
     <ImageView
@@ -41,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:scaleType="centerInside"
         android:src="@drawable/img_dealer">
 

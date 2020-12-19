@@ -8,7 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="game_background">#FDF0E1</color>
-    <color name="winner_txt">#15447E</color>
+    <color name="winner_txt">#2352AF</color>
     <color name="winner_txt2">#F6BE4F</color>
     <color name="buttonMain">#ed634c</color>
+    <color name="crownBlue">#55dafe</color>
+    <color name="buttonWinner">#F69734</color>
+
 </resources>
