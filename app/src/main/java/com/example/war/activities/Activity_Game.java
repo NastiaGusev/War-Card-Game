@@ -109,6 +109,7 @@ public class Activity_Game extends Activity_Base implements MyDialog.MyDialogLis
 
     private void openDialog() {
         dialog = new MyDialog();
+        dialog.setCancelable(false);
         dialog.show(getSupportFragmentManager(), "example dialog");
     }
 

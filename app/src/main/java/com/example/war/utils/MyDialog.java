@@ -34,6 +34,11 @@ public class MyDialog extends AppCompatDialogFragment {
                         String player2 = dialog_LBL_ply2.getText().toString();
                         listener.applyTexts(player1, player2);
                     }
+                }).setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        listener.applyTexts("Player1", "Player2");
+                    }
                 });
         dialog_LBL_ply1 = view.findViewById(R.id.dialog_LBL_ply1);
         dialog_LBL_ply2 = view.findViewById(R.id.dialog_LBL_ply2);
@@ -50,6 +55,7 @@ public class MyDialog extends AppCompatDialogFragment {
                     "must implement ExampleDialogListener");
         }
     }
+
     public interface MyDialogListener {
         void applyTexts(String name1, String name2);
     }
