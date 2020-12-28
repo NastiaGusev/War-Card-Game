@@ -1,4 +1,5 @@
-WAR GAME
+Start of the game: 
+
 ![](screenshots/start.jpg) 
 
 
@@ -7,7 +8,8 @@ Dialog box for entering names:
 ![](screenshots/names.jpg)
 
 
-Game:
+The game: 
+
 ![](screenshots/wargame.jpg)
 
 
