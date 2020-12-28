@@ -1,10 +1,10 @@
 WAR GAME
-![](screenshots/start.jpg) ![](screenshots/names.jpg)
+![](screenshots/start.jpg) 
 
 
 
 Dialog box for entering names:
-
+![](screenshots/names.jpg)
 
 
 Game:
