@@ -1,21 +1,18 @@
-Start of the game: 
+#Start of the game: 
 
-![](screenshots/start.jpg) 
-
-
-
-Dialog box for entering names:
-![](screenshots/names.jpg)
+| Start                    | Dialog box               |      
+:-------------------------:|:-------------------------:
+![](screenshots/start.jpg)  | ![](screenshots/names.jpg)
 
 
-The game: 
+#The game: 
 
-![](screenshots/wargame.jpg)
+| Game                     | Winner                   |      
+:-------------------------:|:-------------------------:
+![](screenshots/wargame.jpg)  | ![](screenshots/winner.jpg)
 
+#High Scores 
 
-Winner activity:
-![](screenshots/winner.jpg)
-
-
-Map with the scoreboard: 
+| Map                     | 
+:-------------------------:
 ![](screenshots/scoreboard.jpg)
